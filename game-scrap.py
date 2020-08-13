@@ -1,13 +1,13 @@
 import bs4
+import re
 import urllib.request as urllib_request
-import pandas
+import pandas as pd
 
 from urllib.request import urlopen, Request
 from urllib.error import URLError, HTTPError
 from bs4 import BeautifulSoup
 
-
-url2 = 'https://www.vgdb.com.br/consoles/'
+url2 = 'https://en.wikipedia.org/wiki/Video_game_console'
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}
 
 try:
@@ -24,29 +24,23 @@ html = html.decode('utf-8')
 
 soup = BeautifulSoup(html, 'html.parser')
 
-titles = []
-links = []
-for li in soup.findAll('li'):
-    try:
-        games_name.append(li.a['title'])
-        games_link.append(li.a['href'])
-    except KeyError:
-        pass
+tabela_consoles = soup.find('table', class_='wikitable').findAll('tr')
 
-for t in titles:
-    t = re.sun(' ','+', t)
-    t = t + ' Console'
-    wiki_search = 'https://en.wikipedia.org/w/index.php?cirrusUserTesting=glent_m0&search=' + t + '&title=Special%3ASearch&go=Go&wprov=acrw1_2'
+consoles = []
+for linha in tabela_consoles:
+    linha = linha.findAll('td')
+    if len(linha) == 5:
+        consoles.append(linha)
 
-    try:
-        req = Request(wiki_search)
-        resp = urlopen(req)
-    except URLError as e:
-        print(e.reason)
-    except HTTPError as e:
-        print(e.status, e.reason)
+dic_consoles = {'Console':[], 'Release year': [], 'Original price': [], 'Inflation 2020': [], 'Global Sales': []}
+for console in consoles:
+   dic_consoles['Console'].append(console[0].getText('td'))
+   dic_consoles['Release year'].append(int(console[1].getText('td')))
+   dic_consoles['Original price'].append(console[2].getText('td'))
+   dic_consoles['Inflation 2020'].append(console[3].getText('td'))
+   quant = re.sub(',','',console[4].getText('td'))
+   quant = re.match('(\d+)', quant).group()
+   dic_consoles['Global Sales'].append(int(quant))
+df_consoles = pd.DataFrame(dic_consoles)
 
-    html = resp.read()
-    html = html.decode('utf-8')
-
-    game_page = BeautifulSoup(html, 'html.parser')
+df_consoles.to_csv('consoles.csv', index=False)
