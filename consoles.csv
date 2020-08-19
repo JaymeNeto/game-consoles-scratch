@@ -1,38 +1,34 @@
-Console,Release year,Original price,Inflation 2020,Global Sales
-Magnavox Odyssey,1972,100,553,350000
-Atari 2600,1977,200,882,30000000
-Intellivision,1980,300,996,3000000
-Atari 5200,1982,270,740,1400000
-Colecovision,1982,175,480,2000000
-NES,1983,200,490,61900000
-Atari 7800,1984,150,380,3770000
-Master System,1986,200,470,13000000
-Game Boy,1989,110,234,118690000
-TurboGrafx-16,1989,200,426,5800000
-Genesis,1989,190,405,30750000
-SNES,1991,200,384,49100000
-CD-I,1991,400,768,1000000
-Neo Geo,1991,650,1248,980000
-Sega CD,1992,300,561,2240000
-Atari Jaguar,1993,250,453,250000
-3DO,1993,700,1267,2000000
-32X,1994,160,282,665000
-PlayStation,1995,300,516,102490000
-Sega Saturn,1995,400,688,32390000
-Nintendo 64,1996,200,334,32390000
-Dreamcast,1999,200,314,9130000
-PlayStation 2,2000,300,459,155000000
-GameCube,2001,200,294,21740000
-Xbox,2001,300,441,24000000
-Game Boy Advance,2001,100,147,118690000
-Nintendo DS,2004,200,278,154020000
-PlayStation Portable,2004,250,348,82000000
-Xbox 360,2005,400,540,84700000
-PlayStation 3,2006,500,780,87400000
-Wii,2006,250,326,101630000
-Nintendo 3DS,2011,250,293,75280000
-PlayStation Vita,2011,250,293,15900000
-Wii U,2012,350,399,13560000
-PlayStation 4,2013,400,448,112300000
-Xbox One,2013,500,560,46900000
-Nintendo Switch,2017,300,318,61440000
+Console,Empresa,Geração,Preco de lançamento,Vendas
+Magnavox Odyssey,Magnavox,First,US$100,"350,000"
+Odyssey series,"Magnavox,Philips",First,US$100–230,Unknown
+TV Tennis Electrotennis,Epoch Co.,First,"JP¥19,500","20,000"
+Home Pong,"Atari,Sears Tele-Games",First,US$98.95,"150,000"
+Coleco Telstar series,Coleco,First,US$50,1 million
+Color TV-Game series,Nintendo,First,"JP¥9800–48,000",1.5 million
+Fairchild Channel F,Fairchild Semiconductor,Second,US$169.95,0.25 million
+Atari VCS/2600,Atari,Second,US$199,
+Bally Astrocade,Bally Technologies,Second,US$299,Unknown
+Magnavox Odyssey²,Magnavox,Second,US$200,2 million
+Intellivision,Mattel,Second,US$299,3 million
+Emerson Arcadia 2001,Emerson Radio Corporation,Second,US$200,Unknown
+ColecoVision,Coleco,Second,US$175,2 million
+Atari 5200,Atari,Second,US$270,1 million
+Vectrex,General Consumer Electric andMilton Bradley,Second,US$199,Unknown
+Microvision,Milton Bradley,Second,US$49.99,
+Entex Select-A-Game,Entex Industries,Second,US$59,
+Adventure Vision,Entex Industries,Second,US$79.99,
+Super Micro,Palmtex,Second,US$39.95,
+Epoch Game Pocket Computer,Epoch,Second,"¥12,800",
+Game & Watch,Nintendo,Second,"¥5,800",
+SG-1000,Sega,Third,"JP¥15,000",
+Famicom/Nintendo Entertainment System (NES),Nintendo,Third,"JP¥14,800",
+Sega Mark III/Master System,Sega,Third,"JP¥15,000",
+Atari 7800,Atari,Third,US$140,
+TurboGrafx-16,NEC,Fourth,US$199.99,10 million
+Mega Drive/Genesis,Sega,Fourth,US$189.99,35.25 million
+Super NES,Nintendo,Fourth,US$199.99,
+Neo Geo,SNK,Fourth,US$649.99(Gold,
+Game Boy,Nintendo,Fourth,"¥12,500",
+Atari Lynx,Atari,Fourth,US$189.99,
+Game Gear,Sega,Fourth,"¥14,500US$149.99",
+TurboExpress,NEC,Fourth,US$299.99,
